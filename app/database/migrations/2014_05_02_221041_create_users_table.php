@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration {
             $table->string('roll');
             $table->string('password');
             $table->text('bio');
-            $table->int('reputation')
+            $table->integer('reputation')->default(0);
             $table->timestamps();
         });
 	}
