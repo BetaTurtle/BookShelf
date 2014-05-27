@@ -16,6 +16,12 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('/home', function()
+{
+	return View::make('home');
+});
+
+
 // route to show the login form
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 
