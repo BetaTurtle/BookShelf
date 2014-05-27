@@ -38,3 +38,18 @@ Route::post('login', array('uses' => 'HomeController@doLogin'));
 
 // route to logout user
 Route::get('logout', array('uses' => 'HomeController@doLogout'));
+
+
+
+
+Route::get('register', function(){
+ 
+return View::make('register');
+ 
+});
+
+Route::post('register_action', function()
+{
+        $obj = new RegisterController() ;
+        return $obj->store();
+});
