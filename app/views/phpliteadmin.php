@@ -4023,7 +4023,7 @@ class Authorization
 		unset($_COOKIE[COOKIENAME]);
 		unset($_COOKIE[COOKIENAME.'_salt']);
 		session_unset();
-		session_destroy();
+		//session_destroy();
 		$this->authorized = false;
 	}
 
