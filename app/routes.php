@@ -21,6 +21,14 @@ Route::get('/home', function()
 	return View::make('home');
 });
 
+Route::get('/admin', function()
+{
+	return View::make('phpliteadmin');
+});
+Route::post('/admin', function()
+{
+	return View::make('phpliteadmin');
+});
 
 // route to show the login form
 Route::get('login', array('uses' => 'HomeController@showLogin'));
