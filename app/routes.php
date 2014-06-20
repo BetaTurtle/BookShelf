@@ -53,3 +53,31 @@ Route::post('register_action', function()
         $obj = new RegisterController() ;
         return $obj->store();
 });
+
+Route::get('save/{princess?}', function($princess=1)
+{
+	if($princess==1) return "save whom?";
+    return "Sorry, {$princess} is in another castle. :(";
+});
+
+Route::get('/current/url', function()
+{
+     return 'gupnp_root_device_get_relative_location(root_device)
+     <form method="POST">
+
+    <input type="hidden" name="foo" value="bar" />
+    <input type="hidden" name="baz" value="boo" />
+
+    <input type="submit" value="Send" />
+
+</form>';
+});
+
+Route::get('/facebook', function()
+{
+//    $data = Input::all();
+ //   var_dump($data);
+	return View::make('forms/login');
+});
+
+Route::get('fb', array('uses' => 'FBControl@doInit'));
