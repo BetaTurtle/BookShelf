@@ -128,7 +128,7 @@ FB.api(
     {
     "url": "http://laravel.com/assets/img/logo-head.png",
     "message": "A test message",
-    "access_token": "CAAGArJTqa04BAAiwtQneGrEsYgQIZBOAxicFup0BwFJtuk91rWHt7UBfdcl9lnU7aZADPN8S3zAE67DvS6mL9mGZBt05SRFUJtkfyiQbZA5xUxM7PvKQ3ka4zrfakK34sl5EwobrM7QWYujbRviPss0Igr2Ic8jexb3O3ygxhcUBys0ADI4YRXMKGQehD0AZD"
+    "access_token": "CAAGArJTqa04BACD6PRhZCGqLuj6hD500npKCJHOA0gQMWATliAdeZB76jRpkzPXQ1QoQ8nt64FII5ruhz3tVG5vblwdrK07I0r45H2EWtXXholOL95o5rTwPiuy8pAjQVNNeHBlBE86zfo8KNqJtuAeq7nkv35HG5MfSrlKpZCKK2c9LKv7MaKV4ZCJCVPzMRr6HlCkKsQZDZD"
     },
     function (response) {
     	console.log(response)
