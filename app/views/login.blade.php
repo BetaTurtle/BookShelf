@@ -1,14 +1,8 @@
 <!-- app/views/login.blade.php -->
-
-<!doctype html>
-<html>
-<head>
-	<title>Look at me Login</title>
-</head>
-<body>
-{{ isset(Auth::user()->nick) ? 'Logged in as '.Auth::user()->nick :  'Not logged in' }}
+<div id="myModal" class="reveal-modal" data-reveal>
+  <h2>Login/Register</h2>
 	{{ Form::open(array('url' => 'login')) }}
-		<h1>Login</h1>
+		<h4>Login</h4>
 
 		<!-- if there are login errors, show them here -->
 		<p>
@@ -26,8 +20,9 @@
 			{{ Form::password('password') }}
 		</p>
 
-		<p>{{ Form::submit('Submit!') }}</p>
+		<p>{{ Form::submit('Submit!', array('class' => 'button')) }}</p>
 	{{ Form::close() }}
 	<a href="{{ URL::to('logout') }}">Logout</a>
-</body>
-</html>
+  <a class="close-reveal-modal">&#215;</a>
+ 
+</div>
