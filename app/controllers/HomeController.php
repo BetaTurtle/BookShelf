@@ -55,17 +55,18 @@ class HomeController extends BaseController {
 
 			// attempt to do the login
 			if (Auth::attempt($userdata)) {
+				return Redirect::back();
 
 				// validation successful!
 				// redirect them to the secure section or whatever
 				// return Redirect::to('secure');
 				// for now we'll just echo success (even though echoing in a controller is bad)
-				echo 'SUCCESS!';
+				//echo 'SUCCESS!';
 
 			} else {	 	
-
+				return Redirect::back();
 				// validation not successful, send back to form	
-				return Redirect::to('login');
+				//return Redirect::to('login');
 
 			}
 
@@ -76,6 +77,7 @@ class HomeController extends BaseController {
 	public function doLogout()
 		{
 			Auth::logout(); // log the user out of our application
-			return Redirect::to('login'); // redirect the user to the login screen
+			//return Redirect::to('login');
+			return Redirect::back(); // redirect the user to the login screen
 		}
 }
